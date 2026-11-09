@@ -1,1 +1,127 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClinicFlow | حجز المواعيد</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="index.html">Clinic<span>Flow</span></a>
+    <div class="nav-actions">
+      <button id="languageBtn" class="outline-btn">English</button>
+      <a href="#booking" class="small-link" data-ar="احجز موعدك" data-en="Book now">احجز موعدك</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero container">
+    <div class="hero-content">
+      <span class="eyebrow" data-ar="رعاية صحية أقرب إليك" data-en="Healthcare made easier">
+        رعاية صحية أقرب إليك
+      </span>
+      <h1 data-ar="صحتك تستحق<br>اهتماماً أفضل." data-en="Your health deserves<br>better care.">
+        صحتك تستحق<br>اهتماماً أفضل.
+      </h1>
+      <p data-ar="احجز موعدك مع الطبيب بسهولة، وتابع طلب الحجز من مكانك."
+         data-en="Book your doctor's appointment easily and follow your request.">
+        احجز موعدك مع الطبيب بسهولة، وتابع طلب الحجز من مكانك.
+      </p>
+      <a href="#booking" class="primary-btn" data-ar="ابدأ الحجز" data-en="Start booking">ابدأ الحجز</a>
+    </div>
+
+    <div class="hero-card">
+      <div class="medical-icon">✚</div>
+      <h2 data-ar="حجز طبي بسيط" data-en="Simple medical booking">حجز طبي بسيط</h2>
+      <p data-ar="نظام تجريبي لتنظيم طلبات مقابلة الطبيب."
+         data-en="A demo system for organizing doctor appointments.">
+        نظام تجريبي لتنظيم طلبات مقابلة الطبيب.
+      </p>
+      <div class="card-line"></div>
+      <div class="feature"><span>✓</span> <span data-ar="طلب حجز إلكتروني" data-en="Online booking request">طلب حجز إلكتروني</span></div>
+      <div class="feature"><span>✓</span> <span data-ar="متابعة حالة الطلب" data-en="Request status tracking">متابعة حالة الطلب</span></div>
+      <div class="feature"><span>✓</span> <span data-ar="واجهة عربية وإنجليزية" data-en="Arabic and English interface">واجهة عربية وإنجليزية</span></div>
+    </div>
+  </section>
+
+  <section class="booking-section" id="booking">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow" data-ar="ابدأ من هنا" data-en="GET STARTED">ابدأ من هنا</span>
+        <h2 data-ar="احجز موعد الطبيب" data-en="Book a doctor appointment">احجز موعد الطبيب</h2>
+        <p data-ar="أدخل بياناتك لإرسال طلب الحجز." data-en="Enter your details to submit a booking request.">
+          أدخل بياناتك لإرسال طلب الحجز.
+        </p>
+      </div>
+
+      <form id="bookingForm" class="booking-form">
+        <div class="form-grid">
+          <label>
+            <span data-ar="الاسم الكامل" data-en="Full name">الاسم الكامل</span>
+            <input type="text" id="patientName" required maxlength="80" placeholder="الاسم الكامل">
+          </label>
+
+          <label>
+            <span data-ar="رقم الهاتف" data-en="Phone number">رقم الهاتف</span>
+            <input type="tel" id="patientPhone" required maxlength="20" placeholder="09XXXXXXXX">
+          </label>
+
+          <label>
+            <span data-ar="تاريخ الموعد المطلوب" data-en="Preferred date">تاريخ الموعد المطلوب</span>
+            <input type="date" id="appointmentDate" required>
+          </label>
+
+          <label>
+            <span data-ar="الفترة المناسبة" data-en="Preferred time">الفترة المناسبة</span>
+            <select id="appointmentTime" required>
+              <option value="">اختر الفترة</option>
+              <option value="morning">صباحاً</option>
+              <option value="afternoon">ظهراً</option>
+              <option value="evening">مساءً</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="full-label">
+          <span data-ar="سبب الزيارة (اختياري)" data-en="Reason for visit (optional)">سبب الزيارة (اختياري)</span>
+          <textarea id="visitReason" maxlength="500" rows="3" placeholder="اكتب سبب الزيارة باختصار"></textarea>
+        </label>
+
+        <div class="notice">
+          <strong data-ar="تنبيه:" data-en="Notice:">تنبيه:</strong>
+          <span data-ar="هذا نموذج تجريبي. لا تدخل بيانات طبية أو شخصية حقيقية."
+                data-en="This is a demo. Do not enter real personal or medical information.">
+            هذا نموذج تجريبي. لا تدخل بيانات طبية أو شخصية حقيقية.
+          </span>
+        </div>
+
+        <button type="submit" class="primary-btn full-btn" data-ar="إرسال طلب الحجز" data-en="Submit booking request">
+          إرسال طلب الحجز
+        </button>
+
+        <p id="bookingMessage" class="message" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <span class="brand">Clinic<span>Flow</span></span>
+    <p data-ar="© 2026 ClinicFlow — نموذج تجريبي"
+       data-en="© 2026 ClinicFlow — Demo project">
+      © 2026 ClinicFlow — نموذج تجريبي
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>
+
